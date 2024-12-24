@@ -1,12 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace restaurant_API.Models
+namespace restaurant_API.Models.DTO
 {
-    public class MenuItem
+    public class MenuItemCreateDTO
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         public string Name { get; set; }
 
@@ -19,7 +16,6 @@ namespace restaurant_API.Models
         [Range(1, int.MaxValue)]
         public double Price { get; set; }
 
-        [Required]
-        public string Image { get; set; }
+        public IFormFile File { get; set; }
     }
 }
